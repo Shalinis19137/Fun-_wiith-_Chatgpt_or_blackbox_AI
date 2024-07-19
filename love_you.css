@@ -1,0 +1,95 @@
+.heart-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 40px auto;
+    perspective: 1000px;
+  }
+  
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+  }
+  
+  .heart-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50% 50% 0 0;
+    background-color: #ff69b4;
+    transform-origin: 50% 100%;
+    animation: heart-top-animate 2s infinite;
+  }
+  
+  .heart-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 0 0 50% 50%;
+    background-color: #ff69b4;
+    transform-origin: 50% 0;
+    animation: heart-bottom-animate 2s infinite;
+  }
+  
+  .love-you {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .love-you span {
+    display: inline-block;
+    margin: 0 5px;
+    animation: love-you-animate 2s infinite;
+  }
+  
+  @keyframes heart-top-animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes heart-bottom-animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes love-you-animate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

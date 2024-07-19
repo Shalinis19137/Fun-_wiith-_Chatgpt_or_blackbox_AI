@@ -1,0 +1,79 @@
+.heart-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 40px auto;
+    perspective: 1000px;
+  }
+  
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+  }
+  
+  .i, .love, .you {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  .i {
+    animation: i-animate 2s infinite;
+  }
+  
+  .love {
+    animation: love-animate 2s infinite;
+    animation-delay: 0.5s;
+  }
+  
+  .you {
+    animation: you-animate 2s infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes i-animate {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  @keyframes love-animate {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  @keyframes you-animate {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
